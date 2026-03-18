@@ -29,14 +29,14 @@ var readline = require('readline-sync');
 
 // → Seu código aqui:
 
-// let boolean1 = (true && true);
-// let boolean2 = (true && false);
-// let boolean3 = (false && true);
-// let boolean4 = (false && false);
-// console.log(`true && true → ${boolean1}`);
-// console.log(`true && false → ${boolean2}`);
-// console.log(`false && true → ${boolean3}`);
-// console.log(`false && false → ${boolean4}`);
+let boolean1 = (true && true);
+let boolean2 = (true && false);
+let boolean3 = (false && true);
+let boolean4 = (false && false);
+console.log(`true && true → ${boolean1}`);
+console.log(`true && false → ${boolean2}`);
+console.log(`false && true → ${boolean3}`);
+console.log(`false && false → ${boolean4}`);
 
 console.log("_______________________________");
 
@@ -56,14 +56,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let boolean1 = (true || true);
-// let boolean2 = (true || false);
-// let boolean3 = (false || true);
-// let boolean4 = (false || false);
-// console.log(`true || true → ${boolean1}`);
-// console.log(`true || false → ${boolean2}`);
-// console.log(`false || true → ${boolean3}`);
-// console.log(`false || false → ${boolean4}`);
+let boolean1 = (true || true);
+let boolean2 = (true || false);
+let boolean3 = (false || true);
+let boolean4 = (false || false);
+console.log(`true || true → ${boolean1}`);
+console.log(`true || false → ${boolean2}`);
+console.log(`false || true → ${boolean3}`);
+console.log(`false || false → ${boolean4}`);
 
 console.log("_______________________________");
 
@@ -79,14 +79,14 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let sistemaAtivo = true;
-// let modoManutencao = !sistemaAtivo;
-// let lugarVago = false;
-// let lugarOcupado = !lugarVago;
-// console.log(sistemaAtivo);
-// console.log(modoManutencao);
-// console.log(lugarVago);
-// console.log(lugarOcupado);
+let sistemaAtivo = true;
+let modoManutencao = !sistemaAtivo;
+let lugarVago = false;
+let lugarOcupado = !lugarVago;
+console.log(sistemaAtivo);
+console.log(modoManutencao);
+console.log(lugarVago);
+console.log(lugarOcupado);
 
 
 console.log("_______________________________");
@@ -104,22 +104,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let usuario = {
-//     nome: readline.question("Digite seu nome: "),
-//     peso: readline.questionFloat("Digite seu peso: "),
-//     altura: readline.questionFloat("Digite sua altura: "),
-// };
+let usuario = {
+    nome: readline.question("Digite seu nome: "),
+    peso: readline.questionFloat("Digite seu peso: "),
+    altura: readline.questionFloat("Digite sua altura: "),
+};
 
-// usuario.IMC = (usuario.peso / (usuario.altura ** 2));
+usuario.IMC = (usuario.peso / (usuario.altura ** 2));
 
-// let imcAbaixoDoPeso = (usuario.IMC < 18.5);
-// let imcNormal = (usuario.IMC >= 18.5 && usuario.IMC <= 24.9);
-// let imcAcimaDoPeso = (usuario.IMC >= 25 && usuario.IMC <= 29.9);
+let imcAbaixoDoPeso = (usuario.IMC < 18.5);
+let imcNormal = (usuario.IMC >= 18.5 && usuario.IMC <= 24.9);
+let imcAcimaDoPeso = (usuario.IMC >= 25 && usuario.IMC <= 29.9);
 
-// console.log(`IMC: ${usuario.IMC}`);
-// console.log(`O ${usuario.nome} esta abaixo do peso?: ${imcAbaixoDoPeso ? "Sim" : "Nao"}`);
-// console.log(`O ${usuario.nome} esta com peso normal?: ${imcNormal ? "Sim" : "Nao"}`);
-// console.log(`O ${usuario.nome} esta acima do peso?: ${imcAcimaDoPeso ? "Sim" : "Nao"}`);
+console.log(`IMC: ${usuario.IMC}`);
+console.log(`O ${usuario.nome} esta abaixo do peso?: ${imcAbaixoDoPeso ? "Sim" : "Nao"}`);
+console.log(`O ${usuario.nome} esta com peso normal?: ${imcNormal ? "Sim" : "Nao"}`);
+console.log(`O ${usuario.nome} esta acima do peso?: ${imcAcimaDoPeso ? "Sim" : "Nao"}`);
 
 
 console.log("_______________________________");
@@ -139,15 +139,15 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let notaFinal = 4.8;
-// let precisaRecuperacao = (notaFinal >= 4 && notaFinal < 6);
-// let reprovado = (notaFinal < 4);
-// let precisaDeAjuda = (precisaRecuperacao || reprovado);
+let notaFinal = 4.8;
+let precisaRecuperacao = (notaFinal >= 4 && notaFinal < 6);
+let reprovado = (notaFinal < 4);
+let precisaDeAjuda = (precisaRecuperacao || reprovado);
 
-// console.log(notaFinal);
-// console.log(precisaRecuperacao);
-// console.log(reprovado);
-// console.log(precisaDeAjuda);
+console.log(notaFinal);
+console.log(precisaRecuperacao);
+console.log(reprovado);
+console.log(precisaDeAjuda);
 
 
 console.log("_______________________________");
@@ -164,10 +164,10 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let temperatura = 38.2;
-// let diagnostico = temperatura >= 37.6 ? "Esta com febre" : "Nao esta com febre";
+let temperatura = 38.2;
+let diagnostico = temperatura >= 37.6 ? "Esta com febre" : "Nao esta com febre";
 
-// console.log(`A temperatura atual é ${temperatura}, e o paciente ${diagnostico}`);
+console.log(`A temperatura atual é ${temperatura}, e o paciente ${diagnostico}`);
 
 
 
@@ -185,11 +185,11 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let velocidade = 110;
-// let limiteVelocidade = 100;
-// let statusMulta = velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade Regular";
+let velocidade = 110;
+let limiteVelocidade = 100;
+let statusMulta = velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade Regular";
 
-// console.log(`A velocidade atual é ${velocidade} e o resultado da multa é: ${statusMulta}`);
+console.log(`A velocidade atual é ${velocidade} e o resultado da multa é: ${statusMulta}`);
 
 
 console.log("_______________________________");
@@ -207,11 +207,11 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-// let ehEstudante = readline.keyInYN("O usuario e bolsista: ");
-// let boleto = readline.keyInYN("O usuario paga mais de R$1000 mensais pelo curso: ");
-// let mensagem = ehEstudante && boleto ? "Desconto Aplicado" : "Desconto não aplicado";
+let ehEstudante = readline.keyInYN("O usuario e bolsista: ");
+let boleto = readline.keyInYN("O usuario paga mais de R$1000 mensais pelo curso: ");
+let mensagem = ehEstudante && boleto ? "Desconto Aplicado" : "Desconto não aplicado";
 
-// console.log(mensagem);
+console.log(mensagem);
 
 
 console.log("_______________________________");
@@ -235,8 +235,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let usuario = {
+    idade: readline.questionInt("Digite sua idade: "),
+    possuiIngresso: readline.keyInYN("Voce possui ingresso? "),
+    ehAssociado: readline.keyInYN("Voce e associado ao clube? ")
+};
+ 
+let verificacao = {
+    podeEntrarNormal: (usuario.idade >= 18 && usuario.possuiIngresso) || usuario.ehAssociado,
+    podeEntrarSocio: usuario.possuiIngresso && usuario.ehAssociado,
+    precisaAcompanhante: usuario.idade < 18,
+    naoPodeEntrar: !usuario.possuiIngresso && !usuario.ehAssociado
+};
 
+let mensagem = verificacao.podeEntrarNormal || verificacao.podeEntrarSocio ? "Entrada liberada!" : "Entrada negada.";
 
+console.log(mensagem); 
 
 
 console.log("_______________________________");
@@ -258,6 +272,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let produto = {
+    nome: readline.question("Digite o nome do produto: "),
+    quantidade: readline.questionInt("Digite a quantidade em estoque: "),
+    estaAtivo: readline.keyInYN("O produto esta ativo no sistema? ")
+};
+
+let temEstoque = produto.quantidade > 0;
+let produtoDisponivel = temEstoque && produto.estaAtivo;
+let produtoIndisponivel = !temEstoque || !produto.estaAtivo;
+
+console.log(`Produto: ${produto.nome}`);
+console.log(`Tem estoque?: ${temEstoque ? "Sim" : "Nao"}`);
+console.log(`Produto disponivel?: ${produtoDisponivel ? "Sim" : "Nao"}`);
+console.log(`Produto indisponivel?: ${produtoIndisponivel ? "Sim" : "Nao"}`);   
+
 
 console.log("_______________________________");
 
@@ -277,6 +306,20 @@ console.log("_______________________________");
 // d) Exiba todos os resultados.
 
 // → Seu código aqui:
+
+let usuario = {
+    ehAdmin: readline.keyInYN("Voce e administrador? "),
+    logado: readline.keyInYN("Voce esta logado? "),
+    contaAtiva: readline.keyInYN("Sua conta esta ativa? ")
+};
+
+let acessoSistema = usuario.logado && usuario.contaAtiva;
+let acessoAdmin = acessoSistema && usuario.ehAdmin;
+let acessoNegado = !usuario.logado || !usuario.contaAtiva;
+
+console.log(`Acesso ao sistema?: ${acessoSistema ? "Sim" : "Nao"}`);
+console.log(`Acesso de administrador?: ${acessoAdmin ? "Sim" : "Nao"}`);
+console.log(`Acesso negado?: ${acessoNegado ? "Sim" : "Nao"}`); 
 
 
 console.log("_______________________________");
@@ -300,6 +343,22 @@ console.log("_______________________________");
 //    Caso contrário → "Usuário ou senha incorretos."
 
 // → Seu código aqui:
+
+let = credenciaisSistema = {
+    usuario: "admin",
+    senha: "1234"
+};
+
+let usuarioDigitado = readline.question("Digite seu usuario: ");
+let senhaDigitada = readline.question("Digite sua senha: ");
+
+let usuarioCorreto = usuarioDigitado === credenciaisSistema.usuario;
+let senhaCorreta = senhaDigitada === credenciaisSistema.senha;
+let loginValido = usuarioCorreto && senhaCorreta; 
+
+let mensagem = loginValido ? "Login realizado com sucesso!" : "Usuario ou senha incorretos.";
+
+console.log(mensagem);
 
 
 console.log("_______________________________");

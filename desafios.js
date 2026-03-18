@@ -11,6 +11,7 @@
 //       não serão solicitados novamente.
 // ============================================================
 
+var readline = require('readline-sync');
 
 // ------------------------------------------------------------
 // DESAFIO 1 – Cadastro de candidato
@@ -40,6 +41,27 @@
 
 // → Seu código aqui:
 
+let candidato = {
+    nome: readline.question("Digite seu nome: "),
+    idade: readline.questionInt("Digite sua idade: "),
+    anosExperiencia: readline.questionInt("Digite seus anos de experiência: "),
+    possuiSuperior: readline.keyInYN("Você possui ensino superior completo? (s/n) "),
+    possuiTecnico: readline.keyInYN("Você possui curso técnico? (s/n) "),
+    resideNoBrasil: readline.keyInYN("Você reside no Brasil? (s/n) ")
+};  
+
+let criteriosAprovacao = {
+    idadeValida: candidato.idade >= 18 && candidato.idade <= 40,
+    experienciaSuficiente: candidato.anosExperiencia > 2,
+    formacaoAdequada: candidato.possuiSuperior || candidato.possuiTecnico,
+    candidatoAprovado: (candidato.idade >= 18 && candidato.idade <= 40) && (candidato.anosExperiencia > 2) && (candidato.possuiSuperior || candidato.possuiTecnico) && candidato.resideNoBrasil
+};
+
+console.table(candidato);
+console.table(criteriosAprovacao);
+
+let mensagemFinal = criteriosAprovacao.candidatoAprovado ? `Parabéns, ${candidato.nome}! Você está aprovado(a) para a próxima fase.` : `Infelizmente, ${candidato.nome}, seu perfil não atende aos requisitos desta vaga.`;
+console.log(mensagemFinal);
 
 console.log("_______________________________");
 
@@ -64,6 +86,27 @@ console.log("_______________________________");
 // e) Exiba o resultado usando ternário.
 
 // → Seu código aqui:
+
+let temperatura = readline.questionFloat("Digite a temperatura atual em graus Celsius: ");
+
+let muitoFrio = temperatura < 10;
+let frio = temperatura >= 10 && temperatura < 18;
+let agradevel = temperatura >= 18 && temperatura <= 25;
+let quente = temperatura > 25 && temperatura <= 35;
+let muitoQuente = temperatura > 35;
+
+console.log("Muito frio:", muitoFrio);
+console.log("Frio:", frio);
+console.log("Agradável:", agradevel);
+console.log("Quente:", quente);
+console.log("Muito quente:", muitoQuente);
+
+let estaEmAmbienteInterno = readline.keyInYN("Você está em ambiente interno? (s/n) ");
+
+let precisaArCondicionado = temperatura > 28 && !estaEmAmbienteInterno ? "Nao, porque ja esta fora" : "Sim, você precisa de ar condicionado.";
+
+let mensagemArCondicionado = precisaArCondicionado ? "Sim, você precisa de ar condicionado." : "Não, você não precisa de ar condicionado.";
+console.log(mensagemArCondicionado);    
 
 
 console.log("_______________________________");
@@ -101,5 +144,37 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let nome = readline.question("Digite seu nome: ");
+let idade = readline.questionInt("Digite sua idade: ");
+let ehEstudante = readline.keyInYN("Você é estudante? (s/n) ");
+let pagaNoPix = readline.keyInYN("Você vai pagar no PIX? (s/n) ");
+let planoEscolhido = readline.questionInt("Escolha um plano (1, 2, 3 ou 4): ");
+
+let plano1 = planoEscolhido === 1 ? 120.00 : 0;
+let plano2 = planoEscolhido === 2 ? 150.00 : 0;
+let plano3 = planoEscolhido === 3 ? 180.00 : 0;
+let plano4 = planoEscolhido === 4 ? 200.00 : 0;
+
+let valorBase = plano1 + plano2 + plano3 + plano4;
+
+let descontoEstudante = ehEstudante && idade < 25;
+let descontoIdoso = idade >= 60;
+let descontoPix = pagaNoPix && !descontoEstudante && !descontoIdoso;
+let percentualDesconto = descontoEstudante ? 10 : descontoIdoso ? 15 : descontoPix ? 5 : 0;
+
+let valorFinal = valorBase - (valorBase * percentualDesconto / 100);
+
+let plano = {
+    nome: nome,
+    idade: idade,
+    valorBase: valorBase,
+    percentualDesconto: percentualDesconto + "%",
+    valorFinal: valorFinal
+};
+
+console.table(plano);
+
+let mensagemPlano = `Ola, ${nome}! Você escolheu o Plano ${planoEscolhido} com valor base de R$ ${valorBase.toFixed(2)}. Seu desconto é de ${percentualDesconto}%, com o valor final de R$ ${valorFinal.toFixed(2)}.`;
+console.log(mensagemPlano);
 
 console.log("_______________________________");
