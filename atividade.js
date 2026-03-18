@@ -104,23 +104,22 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let usuario = {
-    nome: readline.question("Digite seu nome: "),
-    peso: readline.questionFloat("Digite seu peso: "),
-    altura: readline.questionFloat("Digite sua altura: "),
-};
+// let usuario = {
+//     nome: readline.question("Digite seu nome: "),
+//     peso: readline.questionFloat("Digite seu peso: "),
+//     altura: readline.questionFloat("Digite sua altura: "),
+// };
 
-let IMC = (usuario.peso / (usuario.altura ** 2));
-usuario.push(IMC);
+// usuario.IMC = (usuario.peso / (usuario.altura ** 2));
 
-let imcAbaixoDoPeso = (usuario.IMC < 18.5);
-let imcNormal = (usuario.IMC >= 18.5 && imc <= 24.9);
-let imcAcimaDoPeso = (usuario.IMC >= 25 && imc <= 29.9);
+// let imcAbaixoDoPeso = (usuario.IMC < 18.5);
+// let imcNormal = (usuario.IMC >= 18.5 && usuario.IMC <= 24.9);
+// let imcAcimaDoPeso = (usuario.IMC >= 25 && usuario.IMC <= 29.9);
 
-console.log(`IMC: ${usuario.IMC}`);
-console.log(`O ${usuario.nome} esta abaixo do peso?: ${imcAbaixoDoPeso ? "Sim" : "Nao"}`);
-console.log(`O ${usuario.nome} esta com peso normal?: ${imcNormal ? "Sim" : "Nao"}`);
-console.log(`O ${usuario.nome} esta acima do peso?: ${imcAcimaDoPeso ? "Sim" : "Nao"}`);
+// console.log(`IMC: ${usuario.IMC}`);
+// console.log(`O ${usuario.nome} esta abaixo do peso?: ${imcAbaixoDoPeso ? "Sim" : "Nao"}`);
+// console.log(`O ${usuario.nome} esta com peso normal?: ${imcNormal ? "Sim" : "Nao"}`);
+// console.log(`O ${usuario.nome} esta acima do peso?: ${imcAcimaDoPeso ? "Sim" : "Nao"}`);
 
 
 console.log("_______________________________");
@@ -140,6 +139,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let notaFinal = 4.8;
+// let precisaRecuperacao = (notaFinal >= 4 && notaFinal < 6);
+// let reprovado = (notaFinal < 4);
+// let precisaDeAjuda = (precisaRecuperacao || reprovado);
+
+// console.log(notaFinal);
+// console.log(precisaRecuperacao);
+// console.log(reprovado);
+// console.log(precisaDeAjuda);
+
 
 console.log("_______________________________");
 
@@ -154,6 +163,12 @@ console.log("_______________________________");
 // c) Exiba a variável "diagnostico" com template literal mostrando a temperatura e o resultado do diagnóstico.
 
 // → Seu código aqui:
+
+// let temperatura = 38.2;
+// let diagnostico = temperatura >= 37.6 ? "Esta com febre" : "Nao esta com febre";
+
+// console.log(`A temperatura atual é ${temperatura}, e o paciente ${diagnostico}`);
+
 
 
 console.log("_______________________________");
@@ -170,6 +185,12 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let velocidade = 110;
+// let limiteVelocidade = 100;
+// let statusMulta = velocidade > limiteVelocidade ? "Multa aplicada" : "Velocidade Regular";
+
+// console.log(`A velocidade atual é ${velocidade} e o resultado da multa é: ${statusMulta}`);
+
 
 console.log("_______________________________");
 
@@ -185,6 +206,12 @@ console.log("_______________________________");
 // c) Exiba a variável "mensagem" com template literal.
 
 // → Seu código aqui:
+
+// let ehEstudante = readline.keyInYN("O usuario e bolsista: ");
+// let boleto = readline.keyInYN("O usuario paga mais de R$1000 mensais pelo curso: ");
+// let mensagem = ehEstudante && boleto ? "Desconto Aplicado" : "Desconto não aplicado";
+
+// console.log(mensagem);
 
 
 console.log("_______________________________");
@@ -207,6 +234,9 @@ console.log("_______________________________");
 //    Caso contrário → "Entrada negada."
 
 // → Seu código aqui:
+
+
+
 
 
 console.log("_______________________________");
